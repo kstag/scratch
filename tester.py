@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# ex: set shiftwidth=4 tabstop=4 expandtab:
 from itertools import permutations
 
 versions = ['old', 'new']
@@ -24,4 +25,5 @@ for cur_ver in versions:
               .format(perm, cur_order))
         print('-'*80)
         for dev in cur_order:
-            print('Device {0} has {1} fw at {2}'.format(dev, cur_ver, fw[cur_ver][dev]))
+            print('Device {0} has {1} fw at {2}'
+                  .format(dev, cur_ver, fw[cur_ver][dev]))
